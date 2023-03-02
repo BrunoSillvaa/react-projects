@@ -1,0 +1,26 @@
+.container {
+  height: 20rem;
+  width: 35rem;
+  padding: 2rem;
+  border-radius: 2.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f4f4;
+  box-shadow:  10px 10px 40px #7c7c7c9f;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.temp {
+  font-size: 2.5rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
