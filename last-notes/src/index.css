@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    font-size: 62.5%;
+    --header-bg: #2f2f2f;
+    --dark-gray: #474747;
+    --note-bg: #c4c4c4;
+}
+
+body {
+    height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

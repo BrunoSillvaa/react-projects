@@ -1,0 +1,10 @@
+header {
+    max-width: 100vw;
+    height: 5rem;
+    padding: 0 2rem;
+    background: var(--header-bg);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

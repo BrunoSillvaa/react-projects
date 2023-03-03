@@ -1,0 +1,79 @@
+.note-manager {
+    background: var(--dark-gray);
+    width: 40rem;
+    min-width: 40rem;
+    min-height: 95vh;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-manager div:not(.buttons) {
+    display: flex;
+    flex-direction: column;
+}
+
+.note-manager div label {
+    font-weight: 00;
+    font-size: 2.4rem;
+    color: white;
+    margin-bottom: .8rem;
+}
+
+.note-manager div input {
+    border: 0;
+    border-radius: .4rem;
+    height: 4rem;
+    margin-bottom: 2rem;
+}
+
+.note-manager div textarea {
+    resize: none;
+    border-radius: .4rem;
+}
+
+.note-manager div textarea, .note-manager div input {
+    background: var(--note-bg);
+    font-size: 1.6rem;
+    padding: .5rem;
+}
+
+.note-manager div textarea::-webkit-scrollbar {
+    width: .5rem;
+}
+
+.note-manager div textarea::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.note-manager div textarea::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.note-manager div textarea:hover::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.buttons > button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: .2rem;
+}
+
+.buttons > button:active {
+    transform: scale(105%);
+}
+
+.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: white;
+}

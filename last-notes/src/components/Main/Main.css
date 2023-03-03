@@ -1,0 +1,15 @@
+@media(max-width: 720px) {
+    .notes-area {
+        flex-direction: column-reverse;
+    }
+    .note-manager {
+        width: 100%;
+        min-height: auto;
+        height: auto;
+    }
+}
+
+.notes-area {
+    display: flex;
+    justify-content: space-between;
+}
