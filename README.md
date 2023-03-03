@@ -1,6 +1,5 @@
 <div id="user-content-toc">
-  <ul align="center" style="display: flex; justify-content: center">
-    <img height="30px" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg">
+  <ul align="center">
     <h1 style="display: inline-block;">React Projects</h1>
   </ul>
 </div>
