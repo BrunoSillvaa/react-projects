@@ -9,7 +9,7 @@ export default function NoteListProvider({ children }) {
     <NoteListContext.Provider
       value={{
         noteList,
-        setNoteList,
+        setNoteList
       }}
     >
       {children}

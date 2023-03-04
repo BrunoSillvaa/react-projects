@@ -1,3 +1,9 @@
+.note-manager.disabled {
+    display: none;
+    animation: disabled 0.5s forwards;
+    
+}
+
 .note-manager {
     background: var(--dark-gray);
     width: 40rem;
