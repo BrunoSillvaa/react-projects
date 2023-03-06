@@ -27,8 +27,7 @@ export default function NoteManagerProvider({ children }) {
       {
         id: String(Math.floor(Math.random() * 1000)),
         title: noteTitle,
-        description: noteDescription,
-        highlight: false
+        description: noteDescription
       },
     ]);
   }

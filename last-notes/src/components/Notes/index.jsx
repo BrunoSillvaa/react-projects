@@ -14,7 +14,6 @@ export default function Notes() {
           id={note.id}
           title={note.title}
           description={note.description}
-          highlight={note.highlight}
         />
       ))}
     </section>

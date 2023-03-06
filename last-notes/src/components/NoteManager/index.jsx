@@ -44,8 +44,11 @@ export default function NoteManager() {
             }}
           />
         </button>
-        <button type="submit" className="confirm" onClick={createNote}>
-          <FaCheck className="icon" />
+        <button className="confirm" type="submit">
+          <FaCheck
+            className="icon" 
+            onClick={createNote}
+          />
         </button>
       </div>
     </form>

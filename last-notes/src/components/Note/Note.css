@@ -9,6 +9,11 @@
     border-radius: .5rem;
     background: var(--note-bg);
     position: relative;
+    cursor: pointer;
+}
+
+.note.selected {
+    outline: 2px solid #474747;
 }
 
 .heart-icon {
