@@ -1,0 +1,28 @@
+.list-row {
+  padding: 0 0 30px 30px;
+
+  .movie-listarea {
+    overflow-x: hidden;
+
+    .movie-list {
+      width: 9999px;
+    }
+
+    .movie {
+      display: inline-block;
+      width: 200px;
+      cursor: pointer;
+
+      .movie-poster {
+        width: 100%;
+        transform: scale(0.9);
+        transition: all ease .2s;
+
+        &:hover {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+}

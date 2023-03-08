@@ -1,0 +1,22 @@
+.list-row {
+  padding: 0 0 30px 30px;
+}
+.list-row .movie-listarea {
+  overflow-x: hidden;
+}
+.list-row .movie-listarea .movie-list {
+  width: 9999px;
+}
+.list-row .movie-listarea .movie {
+  display: inline-block;
+  width: 200px;
+  cursor: pointer;
+}
+.list-row .movie-listarea .movie .movie-poster {
+  width: 100%;
+  transform: scale(0.9);
+  transition: all ease 0.2s;
+}
+.list-row .movie-listarea .movie .movie-poster:hover {
+  transform: scale(1);
+}/*# sourceMappingURL=MovieRow.css.map */
