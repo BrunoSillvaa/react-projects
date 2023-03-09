@@ -7,9 +7,9 @@ import api from './utils/api'
 import Header from './components/Header/Header'
 
 function App() {
-
   const [movieList, setMovieList] = useState([])
   const [featuredData, setFeaturedData] = useState(null)
+  const [blackHeader, setBlackHeader] = useState(false)
 
   useEffect(() => {
     async function loadAll() {
@@ -29,12 +29,26 @@ function App() {
 
     loadAll()
   }, [])
-  
+
+  useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > 10) {
+        setBlackHeader(true)
+      } else {
+        setBlackHeader(false)
+      }
+    }
+    window.addEventListener('scroll', scrollListener)
+
+    return () => {
+      window.removeEventListener('scroll', scrollListener)
+    }
+  }, [])
   
   return (
     <div className='page'>
 
-      <Header />
+      <Header blackHeader={blackHeader} />
 
       {featuredData && 
         <FeaturedMovie featuredFilm={featuredData}/>
@@ -45,6 +59,17 @@ function App() {
           return <MovieRow key={key} title={list.title} filmList={list.filmList}/>
         })}
       </section>
+
+      <footer>
+        <p>Made by <strong>Bruno Silva</strong> using React JS</p>
+      </footer>
+
+        {movieList <= 0 && 
+          <div className="loading-icon">
+            <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="Loading Icon" />
+          </div>
+        }
+      
     </div>
   )
 }

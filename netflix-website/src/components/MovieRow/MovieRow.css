@@ -3,6 +3,30 @@
 }
 .list-row .movie-listarea {
   overflow-x: hidden;
+  position: relative;
+}
+.list-row .movie-listarea .list-left-arrow {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transition: all ease 0.1s;
+  cursor: pointer;
+}
+.list-row .movie-listarea .list-left-arrow:hover {
+  transform: scale(120%);
+}
+.list-row .movie-listarea .list-right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  transition: all ease 0.1s;
+  cursor: pointer;
+}
+.list-row .movie-listarea .list-right-arrow:hover {
+  transform: scale(120%);
 }
 .list-row .movie-listarea .movie-list {
   width: 9999px;

@@ -3,6 +3,34 @@
 
   .movie-listarea {
     overflow-x: hidden;
+    position: relative;
+    
+    .list-left-arrow {
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 1;
+      transition: all ease .1s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(120%);
+      }
+    }
+  
+    .list-right-arrow {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      z-index: 1;
+      transition: all ease .1s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(120%);
+      }
+    }
 
     .movie-list {
       width: 9999px;
@@ -24,5 +52,6 @@
       }
     }
   }
+
 
 }

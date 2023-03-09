@@ -1,11 +1,17 @@
 import React from "react";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import "./MovieRow.css";
 
 export default ({ title, filmList }) => {
   return (
     <div className="list-row">
       <h2 className="list-title">{title}</h2>
+
       <div className="movie-listarea">
+        <div className="list-left-arrow">
+          <IoIosArrowBack style={{ fontSize: 50 }} />
+        </div>
+
         <div className="movie-list">
           {filmList.results.length > 0 &&
             filmList.results.map((film, key) => {
@@ -19,6 +25,10 @@ export default ({ title, filmList }) => {
                 </div>
               );
             })}
+        </div>
+
+        <div className="list-right-arrow">
+          <IoIosArrowForward style={{ fontSize: 50 }} />
         </div>
       </div>
     </div>

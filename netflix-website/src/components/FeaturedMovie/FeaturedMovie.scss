@@ -48,6 +48,9 @@
     font-weight: bold;
 
     .watch-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: #fff;
       color: #000;
       padding: 12px 25px;
@@ -58,9 +61,16 @@
       &:hover {
         opacity: 0.7;
       }
+
+      &:active {
+        transform: scale(105%);
+      }
     }
 
     .list-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: #333;
       color: #fff;
       padding: 15px 25px;
@@ -70,6 +80,10 @@
 
       &:hover {
         opacity: 0.7;
+      }
+
+      &:active {
+        transform: scale(105%);
       }
     }
   }

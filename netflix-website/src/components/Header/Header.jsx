@@ -1,9 +1,9 @@
 import React from "react";
 import './Header.css'
 
-export default () => {
+export default ({blackHeader}) => {
   return (
-    <header>
+    <header className={blackHeader && "black"}>
       <div className="logo">
         <a href="/">
           <img
