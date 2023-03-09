@@ -1,10 +1,26 @@
+@mixin responsive($device) {
+  @if $device == mobile {
+      @media only screen and (max-width: 500px) {
+          @content
+      }
+  }
+};
+
 .featured {
-  height: 100vh;
+  height: calc(100vh - 150px);
+
+  @include responsive(mobile) {
+    height: 70vh;
+  }
 
   .degrade-x {
     height: inherit;
     width: inherit;
     background: linear-gradient(to right, #111 30%, transparent 70%);
+
+    @include responsive(mobile) {
+      background: none;
+    }
   }
 
   .degrade-y {
@@ -17,11 +33,21 @@
     justify-content: center;
     gap: 15px;
     padding-left: 30px;
+
+    @include responsive(mobile) {
+      align-items: center;
+      padding: 0 15px;
+      background: linear-gradient(to top, #111 10%, transparent 90%);
+    }
   }
 
   .title {
     font-size: 60px;
     font-weight: bold;
+
+    @include responsive(mobile) {
+      font-size: 40px;
+    }
   }
 
   .infos {
@@ -36,9 +62,16 @@
   }
 
   .description {
-    max-width: 40%;
+    max-width: 36%;
     color: #999;
     font-size: 20px;
+
+    @include responsive(mobile) {
+      font-size: 17px;
+      max-width: 100%;
+      overflow: scroll;
+      max-height: 30vh;
+    }
   }
 
   .buttons {

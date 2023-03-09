@@ -64,11 +64,11 @@ function App() {
         <p>Made by <strong>Bruno Silva</strong> using React JS</p>
       </footer>
 
-        {movieList <= 0 && 
-          <div className="loading-icon">
-            <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="Loading Icon" />
-          </div>
-        }
+      {movieList <= 0 && 
+        <div className="loading-icon">
+          <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="Loading Icon" />
+        </div>
+      }
       
     </div>
   )

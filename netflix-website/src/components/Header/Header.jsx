@@ -3,7 +3,7 @@ import './Header.css'
 
 export default ({blackHeader}) => {
   return (
-    <header className={blackHeader && "black"}>
+    <header className={`${blackHeader && "black"}`}>
       <div className="logo">
         <a href="/">
           <img
