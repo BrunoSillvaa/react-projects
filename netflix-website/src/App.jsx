@@ -64,7 +64,7 @@ function App() {
         <p>Made by <strong>Bruno Silva</strong> using React JS</p>
       </footer>
 
-      {movieList <= 0 && 
+      {(movieList <= 0 && featuredData == null) && 
         <div className="loading-icon">
           <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="Loading Icon" />
         </div>
