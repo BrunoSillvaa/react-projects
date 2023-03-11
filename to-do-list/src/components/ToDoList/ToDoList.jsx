@@ -1,36 +1,38 @@
+import React, { useContext, useState } from "react";
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { noteListContext } from '../../context/noteListContext';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import React, { useState } from "react";
-import './ToDoList.css'
 import Note from '../Note/Note';
+import './ToDoList.css'
 
 export default () => {
-  const [noteList, setNoteList] = useState([])
-
-  function createNote() {
-    const textareaValue = document.querySelector('textarea').value
-    
-    if (textareaValue) {
-      setNoteList([...noteList, {
-        text: textareaValue
-      }])
-      document.querySelector('textarea').value = ""
-    } else {
-      alert("Acione um texto")
-    }
-  }
+  const {noteList, createNote} = useContext(noteListContext)
 
   return (
     <main>
-      <h1>To Do List</h1>
+      <h1 className='title'>To Do List</h1>
+
       <div className="textarea-container">
         <textarea rows={3} type="text" placeholder="Type your text here..."/>
         <FontAwesomeIcon icon={faPlus} className="icon" onClick={createNote}/>
       </div>
+
+      <hr className='line'/>
+
       <div className="notes-container">
-        {noteList.map((note, index) => {
-          return <Note text={note.text} key={index} noteList={noteList} setNoteList={setNoteList}/>
-        })}
+        <TransitionGroup>
+          {noteList.map((note, index) => {
+            return (
+            <CSSTransition
+             key={index}
+             timeout={500}
+             classNames={"note"}
+            >
+              <Note id={note.id} text={note.text}/>
+            </CSSTransition> )
+          })}
+        </TransitionGroup>
       </div>
     </main>
   )

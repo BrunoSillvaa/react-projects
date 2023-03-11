@@ -1,10 +1,12 @@
 import { faSquare, faSquareCheck } from '@fortawesome/free-regular-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { noteListContext } from '../../context/noteListContext'
 import './Note.css'
 
-export default ({text, noteList, setNoteList}) => {
+export default ({id, text}) => {
+  const {deleteNote} = useContext(noteListContext)
   const [selected, setSelected] = useState(false)
 
   function markOnSquare() {
@@ -14,21 +16,17 @@ export default ({text, noteList, setNoteList}) => {
     setSelected(false)
   }
 
-  function deleteNote(event) {
-    // const newNoteList = noteList.map(note => {
-    //   if (note)
-    // })
-    console.log(event)
-  }
-
   return (
-    <section className="note">
+    <section className="note" id={id}>
       <div className="icons">
         {selected ? 
           <FontAwesomeIcon className='icon' icon={faSquareCheck} onClick={markOffSquare}/> : 
           <FontAwesomeIcon className='icon' icon={faSquare} onClick={markOnSquare}/>
         }
-        <FontAwesomeIcon className='icon' icon={faTrash} onClick={deleteNote}/>
+        <FontAwesomeIcon className='icon' icon={faTrash} onClick={() => {
+          const deleteID = id
+          deleteNote(deleteID)
+        }}/>
       </div>
       <p className='text'
          style={selected ?

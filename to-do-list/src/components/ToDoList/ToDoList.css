@@ -3,12 +3,15 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   width: 300px;
   height: 500px;
   padding: 20px;
   border-radius: 26px;
-  font-size: 18px;
+  box-shadow: 7px 7px 20px;
+}
+main .title {
+  font-size: 36px;
   font-weight: bold;
 }
 main .textarea-container {
@@ -28,6 +31,9 @@ main .textarea-container textarea {
 main .textarea-container textarea:focus {
   outline: none;
 }
+main .textarea-container textarea::-webkit-scrollbar {
+  display: none;
+}
 main .textarea-container .icon {
   position: absolute;
   font-size: 25px;
@@ -41,8 +47,27 @@ main .notes-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 10px;
+  padding-top: 10px;
+  border-top: 2px solid rgb(116, 116, 116);
 }
 main .notes-container::-webkit-scrollbar {
   display: none;
+}
+
+.note-enter {
+  opacity: 0;
+}
+
+.note-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.note-exit {
+  opacity: 1;
+}
+
+.note-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
 }/*# sourceMappingURL=ToDoList.css.map */

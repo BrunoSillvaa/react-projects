@@ -1,11 +1,14 @@
-import './App.css'
+import NoteListProvider from './context/noteListContext'
 import ToDoList from './components/ToDoList/ToDoList'
+import './App.css'
 
 function App() {
 
   return (
     <div className="container">
-      <ToDoList />
+      <NoteListProvider>
+        <ToDoList />
+      </NoteListProvider>
     </div>
   )
 }
